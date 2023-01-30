@@ -26,8 +26,13 @@ const App = ()=>{
     const calculate = () =>{
         try {
             setResult(eval(result).toString());
+
+            if (eval(result)/0){
+            throw ("Error")
+            setResult(result=0)}
+
         } catch (error) {
-            setResult("Errorr")    
+            setResult("Error")    
         }
         
     }
